@@ -55,7 +55,7 @@
     content: "";
     position: absolute;
     width: 100vw;
-    height: 2px;
+    height: 1px;
     background: #d9d9d9;
     left: 50%;
     transform: translateX(-50%);

@@ -1,15 +1,43 @@
+.options {}
+
 .radio {
-}
+    position: relative;
+    appearance: none;
+    transition: opacity 0.3s;
 
-.radio::before {
-}
-
-
-.radio:checked::before {
+    &:hover {
+        opacity: 0.5;
+    }
 }
 
 .label {
+    display: flex;
+    margin-bottom: 17px;
 }
 
-.options {
+.label span {
+    margin-left: 34px;
+}
+
+.radio::before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    border-radius: 50%;
+}
+
+.radio:checked::after {
+    content: '';
+    position: absolute;
+
+    width: 10px;
+    height: 10px;
+    top: calc(50% + 0.5px);
+    left: 50%;
+    transform: translate(50%, -50%);
+    background-color: #000;
+    border-radius: 50%;
 }

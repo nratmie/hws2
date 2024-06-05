@@ -1,23 +1,65 @@
-.item {
-}
+.item {}
 
-.item:last-of-type {
-}
+.item:last-of-type {}
 
 .users {
+    font-size: 14px;
+    margin-bottom: 28px;
 }
 
 .buttonsContainer {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-bottom: 18px;
 }
 
 .container {
+    max-width: 606px;
+}
+
+table {
+    display: flex;
+    flex-direction: column;
 }
 
 .thead {
+    display: block;
+    width: 100%;
+    background-color: #E5E5E5;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+
+    font-weight: 600;
+
+    tr {
+        height: 36px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+tr {
+    display: flex;
+    padding: 16px;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid #E5E5E5;
+    }
 }
 
 .nameCol {
+    width: 40%;
 }
 
 .ageCol {
+    width: 60%;
+}
+
+td[id*='age'] {
+    display: flex;
+    width: 20px;
+    justify-content: flex-end;
+    font-weight: 600;
 }

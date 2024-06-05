@@ -1,2 +1,20 @@
 .container {
+    display: flex;
+    gap: 108px;
+    /* position: relative;
+    width: 164px; */
+
+    /* &:nth-child(2) {
+        display: flex;
+        gap: 17px;
+    } */
+}
+
+.container::before {
+    /* content: '';
+    position: absolute;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    background: url(' ../hw07/common/img/chevron-down.svg'); */
 }

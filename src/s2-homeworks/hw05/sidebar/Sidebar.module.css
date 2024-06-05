@@ -44,7 +44,7 @@
 .nav a.active {
     text-decoration: underline;
     color: #0059b2;
-    pointer-events: none;
+    /* pointer-events: none; */
     /* Disables hover */
 }
 

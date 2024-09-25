@@ -1,10 +1,11 @@
 import React from 'react'
-import {useDispatch, useSelector} from 'react-redux'
-import {AppStoreType} from './bll/store'
-import {loadingAC} from './bll/loadingReducer'
+import { useDispatch, useSelector } from 'react-redux'
+import { AppStoreType } from './bll/store'
+import { loadingAC } from './bll/loadingReducer'
 import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
+import c2 from '../hw04/common/c2-SuperButton/SuperButton.module.css'
 import s2 from '../../s1-main/App.module.css'
-import {Loader} from './Loader'
+import { Loader } from './Loader'
 
 /*
 * 1 - в файле loadingReducer.ts дописать типы и логику
@@ -15,12 +16,17 @@ import {Loader} from './Loader'
 
 const HW10 = () => {
     // useSelector, useDispatch // пишет студент
-    const isLoading = false
+    // const isLoading = false
+    const isLoading = useSelector<AppStoreType, boolean>(state => state.loading.isLoading)
+    const dispatch = useDispatch()
 
     const setLoading = () => { // пишет студент // показать крутилку на 1,5 секунд
         // dispatch
+        dispatch(loadingAC(true))
 
-        // setTimeout
+        setTimeout(() => {
+            dispatch(loadingAC(false))
+        }, 1500)
     }
 
     return (
@@ -30,12 +36,13 @@ const HW10 = () => {
             <div className={s2.hw}>
                 {isLoading ? (
                     <div id={'hw10-loading'}>
-                        <Loader/>
+                        <Loader />
                     </div>
                 ) : (
                     <SuperButton
                         id={'hw10-button-start-loading'}
                         onClick={setLoading}
+                        className={c2.smallSuperBtn}
                     >
                         Set loading...
                     </SuperButton>

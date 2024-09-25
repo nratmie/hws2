@@ -8,11 +8,12 @@
     border: none;
     border-radius: 3px;
 
+    transition: all .3s ease;
+
     &:hover:not(:disabled) {
         cursor: pointer;
     }
 }
-
 
 .disabled {
     background: #004d99;
@@ -64,3 +65,12 @@
 }
 
 .button:disabled {}
+
+.smallSuperBtn {
+    width: 140px;
+    margin-top: 12px;
+    margin-bottom: 263px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,14 +1,31 @@
 .buttonsContainer {
-}
+    button {
+        font-size: 14px;
 
-.clock {
+        &:last-child {
+            margin-left: 20px;
+        }
+
+        &[disabled] {
+            color: white;
+            background-color: rgba(0, 102, 204, 0.7);
+        }
+    }
+
+    margin-bottom: 200px;
 }
 
 .watch {
-}
-
-.watch strong {
+    margin-bottom: 35px;
+    font-size: 20px;
+    transition: all 1.8s;
 }
 
 .more {
+    opacity: 0.5;
+    transform: translateY(-150%);
 }
+
+
+
+.watch strong {}
